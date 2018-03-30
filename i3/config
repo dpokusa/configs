@@ -257,13 +257,12 @@ mode "$mode_office" {
 bindsym $mod+o mode "$mode_office"
 
 # QUICK MODE
-set $mode_quick Postman (p), Skype4Linux (s), Slack (l), Spotify+Blockify (m), Rain (r), Voice On (v), Voice Off (f)
+set $mode_quick Postman (p), Skype4Linux (s), Slack (l), Spotify (m), Voice On (v), Voice Off (f)
 mode "$mode_quick" {
     bindsym p exec postman, mode "default"
     bindsym s exec skypeforlinux, mode "default"
     bindsym l exec slack, mode "default"
-    bindsym m exec spotify, exec blockify-ui, mode "default"
-    bindsym r exec vlc ~/Music/rain2.ogg, mode "default"
+    bindsym m exec spotify, mode "default"
     bindsym f exec pactl set-card-profile alsa_card.pci-0000_00_1f.3 off, mode "default"
     bindsym v exec pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo, mode "default"
 
@@ -402,6 +401,9 @@ exec --no-startup-id $(xrandr --listproviders | grep -q "modesetting") && xrandr
 #exec --no-startup-id workrave
 exec --no-startup-id nitrogen --restore
 #exec --no-startup-id skypeforlinux
+
+exec --no-startup-id rescuetime
+
 # /AUTOSTART -----------------------------------------------------------------
 # SPECIFIC
 
