@@ -419,8 +419,8 @@ client.background #FFFFFF
 
 # changed these colours for readability
 # class border backgr. text
-client.focused #222222 #AAAAAA #ffffff
-client.unfocused #333333 #656565 #ffffff
+client.focused #222222 #5555EE #ffffff
+client.unfocused #333333 #000000 #ffffff
 
 # /COLORS -------------------------------------------------------------------
 
